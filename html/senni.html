@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <img src="../image/senni1.png" id ="senni" width="768" height="672">
+    </head>
+    
+    <body onload="senni()">
+        <script>
+            var stock;
+            var stage;
+
+            function senni(){
+                stock = window.localStorage.getItem("result");
+                stage = window.localStorage.getItem("stage");
+                if(stock == 0){
+                    document.location='gameover.html';
+                }
+                document.getElementById("senni").src = "../image/" + stage + "-1_zannki" + stock + ".PNG";
+                // setTimeout();
+                setTimeout(() => {  
+                document.location = 'mario' + stage + '.html';
+                }, 2000);
+            }
+            
+            // setTimeout(() => {  
+            //     document.location = 'mario' + stage + '.html';
+            // }, 2000);
+        </script>
+    </body>
+</html>
